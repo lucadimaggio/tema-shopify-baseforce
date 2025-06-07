@@ -11,6 +11,8 @@
     <img
       src="{{ section.settings.image_mobile | default: section.settings.image | image_url: width: 1000 }}"
       alt="{{ section.settings.alt_text | escape }}"
+      width="1000" {# Codex: specific width for theme-check #}
+      height="{{ 1000 | divided_by: (section.settings.image_mobile | default: section.settings.image).aspect_ratio | ceil }}" {# Codex: calculate height #}
       loading="lazy"
       class="image-mobile"
       style="width: 100%; height: auto; object-fit: {{ section.settings.object_fit }}; {% if section.settings.rounded %}border-radius: 20px;{% endif %} {% if section.settings.shadow %}box-shadow: 0 2px 15px rgba(0,0,0,0.2);{% endif %}"
@@ -23,6 +25,8 @@
       <img
         src="{{ section.settings.image | image_url: width: 1500 }}"
         alt="{{ section.settings.alt_text | escape }}"
+        width="1500" {# Codex: specific width for theme-check #}
+        height="{{ 1500 | divided_by: section.settings.image.aspect_ratio | ceil }}" {# Codex: calculate height #}
         loading="lazy"
         class="image-desktop"
         style="width: 100%; height: auto; object-fit: {{ section.settings.object_fit }}; {% if section.settings.rounded %}border-radius: 20px;{% endif %} {% if section.settings.shadow %}box-shadow: 0 2px 15px rgba(0,0,0,0.2);{% endif %}"
