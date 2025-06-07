@@ -41,34 +41,147 @@
 {
   "name": "Sezione Immagine Avanzata",
   "settings": [
-    { "type": "image_picker", "id": "image", "label": "Immagine desktop" },
-    { "type": "image_picker", "id": "image_mobile", "label": "Immagine mobile (facoltativa - se vuota usa la desktop)" },
-    { "type": "text", "id": "alt_text", "label": "Testo alternativo" },
-    { "type": "url", "id": "image_link", "label": "Link dell'immagine" },
-    { "type": "checkbox", "id": "track_clicks", "label": "Traccia click con dataLayer" },
-    { "type": "select", "id": "object_fit", "label": "Adattamento immagine", "default": "contain", "options": [
-      { "value": "cover", "label": "Cover" },
-      { "value": "contain", "label": "Contain" }
-    ]},
-    { "type": "select", "id": "image_size", "label": "Dimensione immagine", "default": "large", "options": [
-      { "value": "small", "label": "Piccola" },
-      { "value": "medium", "label": "Media" },
-      { "value": "large", "label": "Larghezza intera" }
-    ]},
-    { "type": "color", "id": "bg_color", "label": "Colore sfondo", "default": "#ffffff" },
-    { "type": "richtext", "id": "caption", "label": "Didascalia" },
-    { "type": "select", "id": "caption_align", "label": "Allineamento didascalia", "default": "center", "options": [
-      { "value": "left", "label": "Sinistra" },
-      { "value": "center", "label": "Centro" },
-      { "value": "right", "label": "Destra" }
-    ]},
-    { "type": "checkbox", "id": "rounded", "label": "Bordi arrotondati" },
-    { "type": "checkbox", "id": "shadow", "label": "Ombra immagine" },
-    { "type": "checkbox", "id": "show_on_mobile", "label": "Mostra su mobile", "default": true },
-    { "type": "checkbox", "id": "show_on_desktop", "label": "Mostra su desktop", "default": true },
-    { "type": "range", "id": "padding_top", "label": "Spazio sopra", "min": 0, "max": 100, "step": 5, "default": 40 },
-    { "type": "range", "id": "padding_bottom", "label": "Spazio sotto", "min": 0, "max": 100, "step": 5, "default": 40 },
-    { "type": "range", "id": "padding_horizontal", "label": "Spazio orizzontale", "min": 0, "max": 50, "step": 5, "default": 0 }
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Immagine desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Immagine mobile (facoltativa - se vuota usa la desktop)"
+    },
+    {
+      "type": "text",
+      "id": "alt_text",
+      "label": "Testo alternativo"
+    },
+    {
+      "type": "url",
+      "id": "image_link",
+      "label": "Link dell'immagine"
+    },
+    {
+      "type": "checkbox",
+      "id": "track_clicks",
+      "label": "Traccia click con dataLayer"
+    },
+    {
+      "type": "select",
+      "id": "object_fit",
+      "label": "Adattamento immagine",
+      "default": "contain",
+      "options": [
+        {
+          "value": "cover",
+          "label": "Cover"
+        },
+        {
+          "value": "contain",
+          "label": "Contain"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_size",
+      "label": "Dimensione immagine",
+      "default": "large",
+      "options": [
+        {
+          "value": "small",
+          "label": "Piccola"
+        },
+        {
+          "value": "medium",
+          "label": "Media"
+        },
+        {
+          "value": "large",
+          "label": "Larghezza intera"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Colore sfondo",
+      "default": "#ffffff"
+    },
+    {
+      "type": "richtext",
+      "id": "caption",
+      "label": "Didascalia"
+    },
+    {
+      "type": "select",
+      "id": "caption_align",
+      "label": "Allineamento didascalia",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "Sinistra"
+        },
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "right",
+          "label": "Destra"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "rounded",
+      "label": "Bordi arrotondati"
+    },
+    {
+      "type": "checkbox",
+      "id": "shadow",
+      "label": "Ombra immagine"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_mobile",
+      "label": "Mostra su mobile",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_on_desktop",
+      "label": "Mostra su desktop",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Spazio sopra",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Spazio sotto",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "label": "Spazio orizzontale",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 0
+    }
   ],
   "presets": [
     {

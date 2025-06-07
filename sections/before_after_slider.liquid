@@ -34,10 +34,10 @@
 {% endschema %}
 
 <div class="before_after_slider">
-  <div class="before_image" style="background-image: url('{{ section.settings.before_image | img_url: '1024x' }}');">
+  <div class="before_image" style="background-image: url('{{ section.settings.before_image | image_url: width: 1024 }}');">
     &nbsp;
   </div>
-  <div class="after_image" style="background-image: url('{{ section.settings.after_image | img_url: '1024x' }}');">
+  <div class="after_image" style="background-image: url('{{ section.settings.after_image | image_url: width: 1024 }}');">
     &nbsp;
   </div>
   <div class="slider_container" style="background-color: {{ section.settings.slider_background_color }};">

@@ -719,9 +719,7 @@
 
     {%- liquid
       if product.selected_or_first_available_variant.featured_media
-        assign seo_media = product.selected_or_first_available_variant.featured_media
       else
-        assign seo_media = product.featured_media
       endif
     -%}
 
@@ -737,8 +735,6 @@
   "tag": "section",
   "class": "section",
   "blocks": [
-  
-
     {
       "type": "@app"
     },
@@ -951,30 +947,29 @@
       ]
     },
     {
-  "type": "delivery_estimate",
-  "name": "Previsione di consegna",
-  "settings": [
-    {
-      "type": "text",
-      "id": "pre_text",
-      "label": "Testo introduttivo",
-      "default": "Ordinando ora, <br> riceverai il tuo ordine tra il"
+      "type": "delivery_estimate",
+      "name": "Previsione di consegna",
+      "settings": [
+        {
+          "type": "text",
+          "id": "pre_text",
+          "label": "Testo introduttivo",
+          "default": "Ordinando ora, <br> riceverai il tuo ordine tra il"
+        },
+        {
+          "type": "number",
+          "id": "min_days",
+          "label": "Giorni minimi",
+          "default": 15
+        },
+        {
+          "type": "number",
+          "id": "max_days",
+          "label": "Giorni massimi",
+          "default": 20
+        }
+      ]
     },
-    {
-      "type": "number",
-      "id": "min_days",
-      "label": "Giorni minimi",
-      "default": 15
-    },
-    {
-      "type": "number",
-      "id": "max_days",
-      "label": "Giorni massimi",
-      "default": 20
-    }
-  ]
-},
-
     {
       "type": "custom_liquid",
       "name": "t:sections.custom-liquid.name",

@@ -38,7 +38,7 @@
       </div>
       {% endif %}
       <div class="image__overlay-caption">
-        <h3>{{ section.settings.heading  | escape }}</h3>
+        <h3>{{ section.settings.heading | escape }}</h3>
         <div class="rte">
           {{ section.settings.subheading_text }}
         </div>
@@ -253,7 +253,10 @@
     }
   ],
   "disabled_on": {
-    "groups": ["header", "footer"]
+    "groups": [
+      "header",
+      "footer"
+    ]
   }
 }
 {% endschema %}

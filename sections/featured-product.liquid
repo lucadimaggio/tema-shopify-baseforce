@@ -463,9 +463,7 @@
 
   {%- liquid
     if product.selected_or_first_available_variant.featured_media
-      assign seo_media = product.selected_or_first_available_variant.featured_media
     else
-      assign seo_media = product.featured_media
     endif
   -%}
 
@@ -485,7 +483,10 @@
   "tag": "section",
   "class": "section section-featured-product",
   "disabled_on": {
-    "groups": ["header", "footer"]
+    "groups": [
+      "header",
+      "footer"
+    ]
   },
   "blocks": [
     {
