@@ -1,3 +1,4 @@
+// Refactor Codex - 07/06/2025
 {% schema %}
 {
   "name": "Carosello Recensioni",
@@ -112,8 +113,8 @@
     </div>
   </div>
 
-  <button class="carousel-control-prev" onclick="prevSlide()">&#10094;</button>
-  <button class="carousel-control-next" onclick="nextSlide()">&#10095;</button>
+  <button id="recCarouselPrev" class="carousel-control-prev" aria-label="Recensione precedente" onclick="prevSlide()">&#10094;</button> {# Codex #}
+  <button id="recCarouselNext" class="carousel-control-next" aria-label="Recensione successiva" onclick="nextSlide()">&#10095;</button> {# Codex #}
 </div>
 
 <style>
@@ -123,10 +124,10 @@
     overflow: hidden;
     position: relative;
     margin: 40px auto;
-    border-radius: 0px;
+    border-radius: var(--buttons-radius);
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    background: white;
-    border: 1px solid #eee;
+    background: var(--color-background);
+    border: 1px solid var(--color-foreground);
   }
 
   .carousel-inner {
@@ -149,6 +150,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-family: var(--font-body-family);
+    color: var(--color-foreground);
   }
 
   .review-stars {
@@ -180,7 +183,7 @@
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0,0,0,0.5);
-    color: white;
+    color: var(--color-background);
     border: none;
     border-radius: 50%;
     width: 36px;
