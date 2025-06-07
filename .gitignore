@@ -1,0 +1,19 @@
+# Node dependencies directory
+node_modules/
+
+# Environment variables
+.env
+
+# macOS system files
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Shopify theme-check reports
+theme-check/*
+
+# Optional build output directory
+/dist/
