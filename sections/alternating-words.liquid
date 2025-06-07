@@ -42,37 +42,10 @@
 }
 {% endschema %}
 
+// Refactor Codex - 07/06/2025
+{{ 'alternating-words.css' | asset_url | stylesheet_tag }} {# Codex #}
 <div id="sugar-text">
   <h2>{{ settings.main_text }}</h2>
   {{ settings.main_text }} <span id="alternating-words"></span>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log("JavaScript is working");
-
-    var mainText = '{{ settings.main_text }}';
-    var words = [
-      '{{ settings.word1 }}',
-      '{{ settings.word2 }}',
-      '{{ settings.word3 }}'
-    ].
-    // Debug logs
-    console.log("Main Text: ", mainText);
-    console.log("Words: ", words);
-
-    var index = 0;
-    var element = document.getElementById('alternating-words');
-    var interval = {{ settings.interval | times: 1000 }};
-    console.log("Interval: ", interval);
-
-    function changeWord() {
-      console.log("Changing word to: ", words[index]);
-      element.textContent = words[index];
-      index = (index + 1) % words.length;
-    }
-
-    changeWord(); // Initial call
-    setInterval(changeWord, interval); // Change based on the interval
-  });
-</script>
+<script src="{{ 'alternating-words.js' | asset_url }}" defer></script> {# Codex #}

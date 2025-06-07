@@ -2,8 +2,10 @@
   Sezione immagine avanzata con 20+ feature per Shopify
   Autore: ChatGPT x Luca - 2025
 {% endcomment %}
+// Refactor Codex - 07/06/2025
+{{ 'advanced-image.css' | asset_url | stylesheet_tag }} {# Codex #}
 
-<section class="image-section image-section--{{ section.settings.image_size }}" style="background-color: {{ section.settings.bg_color }}; padding: {{ section.settings.padding_top | append: 'px' }} {{ section.settings.padding_horizontal | append: 'px' }} {{ section.settings.padding_bottom | append: 'px' }};">
+<section class="image-section image-section--{{ section.settings.image_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}" style="background-color: {{ section.settings.bg_color }}; padding: {{ section.settings.padding_top | append: 'px' }} {{ section.settings.padding_horizontal | append: 'px' }} {{ section.settings.padding_bottom | append: 'px' }};"> {# Codex #}
   {% comment %} MOBILE ONLY IMAGE {% endcomment %}
   {% if section.settings.show_on_mobile %}
     <img
@@ -33,19 +35,7 @@
       {{ section.settings.caption }}
     </div>
   {% endif %}
-</section>
-
-<style>
-  @media screen and (min-width: 768px) {
-    .image-mobile { display: none !important; }
-  }
-  @media screen and (max-width: 767px) {
-    .image-desktop { display: none !important; }
-  }
-  .image-section--small img { max-width: 400px; margin: 0 auto; display: block; }
-  .image-section--medium img { max-width: 800px; margin: 0 auto; display: block; }
-  .image-section--large img { max-width: 100%; margin: 0 auto; display: block; }
-</style>
+</section> {# Codex #}
 
 {% schema %}
 {

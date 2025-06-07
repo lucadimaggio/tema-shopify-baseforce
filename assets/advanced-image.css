@@ -1,0 +1,12 @@
+// Refactor Codex - 07/06/2025
+@media screen and (min-width: 768px) {
+  .image-mobile { display: none !important; } /* Codex */
+}
+@media screen and (max-width: 767px) {
+  .image-desktop { display: none !important; } /* Codex */
+}
+.image-section--small img { max-width: 400px; margin: 0 auto; display: block; } /* Codex */
+.image-section--medium img { max-width: 800px; margin: 0 auto; display: block; } /* Codex */
+.image-section--large img { max-width: 100%; margin: 0 auto; display: block; } /* Codex */
+.image-section img { transition: transform 0.3s ease; } /* Codex */
+.image-section img:hover { transform: scale(1.05); } /* Codex */
