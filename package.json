@@ -1,0 +1,13 @@
+{
+  "name": "shopify-theme",
+  "version": "1.0.0",
+  "description": "Custom Shopify theme with test and theme-check",
+  "scripts": {
+    "test": "jest",
+    "theme-check": "theme-check"
+  },
+  "devDependencies": {
+    "@shopify/theme-check": "^1.15.0",
+    "jest": "^29.0.0"
+  }
+}
